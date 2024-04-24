@@ -30,16 +30,16 @@ import Link from "next/link";
 export default function Home() {
   return (
   <>
-  <section className=" min-h-screen flex flex-col px-[3rem]  py-[5rem] ">
+  <section className=" min-h-screen flex flex-col px-[1.5rem] md:px-[3rem] py-[5rem] ">
     <TitleCard 
     type="main"
       title="Unlimited Designs On-Demand" 
       subheadings="Work with a senior product designer to improve usability, user adoption and retention on a fixed fee. Pause or cancel at any time."/>
     <CardSection/>
   </section>
-  <section className=" min-h-screen flex flex-col px-[3rem] py-[5rem] items-start ">
-    <div className=" w-full grid grid-cols-2">
-    <h1 className="text-[2.5rem] md:text-[3.5rem] leading-[1.2] mb-[4rem]">Our process for your success</h1>
+  <section className=" min-h-screen flex flex-col px-[1.5rem] md:px-[3rem] py-[5rem] items-start ">
+    <div className=" w-full grid grid-cols-1 md:grid-cols-2">
+    <h1 className="text-[2rem] sm:text-[2.25rem] md:text-[3.5rem] leading-[1.2] mb-[4rem]">Our process for your success</h1>
     </div>
     
     <div className="grid grid-cols-1 md:grid-cols-3 gap-y-[3rem] gap-x-[2rem] md:gap-y-[4rem] md:gap-x-[3rem]">
@@ -61,13 +61,13 @@ export default function Home() {
       
     </div>
   </section>
-  <section className="min-h-screen flex flex-col  items-center px-[3rem] pb-[5rem]">
+  <section className="min-h-screen flex flex-col items-center px-[1.5rem] md:px-[3rem] pb-[5rem]">
     <TitleCard 
       title="Pricing plan" 
       subheadings="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
     <PricingSection/>
   </section>
-  <section className="min-h-screen flex flex-col px-[3rem] py-[5rem]">
+  <section className="min-h-screen flex flex-col px-[1.5rem] md:px-[3rem] py-[5rem]">
     <TitleCard 
       title="FAQs" 
       subheadings="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."/>
@@ -119,7 +119,7 @@ export default function Home() {
     </div>
     
   </section>
-  <section className="flex flex-col px-[3rem] py-[5rem]">
+  <section className="flex flex-col px-[1.5rem] md:px-[3rem] py-[5rem]">
     <div className="rounded-[20px] bg-white p-[2rem] flex flex-wrap justify-between items-center">
         <div className="flex flex-col justify-between">
           <h2 className="text-[2.25rem]">Let's create something wonderful together</h2>
@@ -132,7 +132,7 @@ export default function Home() {
         </div>
     </div>
   </section>
-  <section className=" flex flex-col px-[3rem] justify-end pt-[5rem]">
+  <section className=" flex flex-col px-[1.5rem] md:px-[3rem] justify-end pt-[5rem]">
     <div className="grid grid-cols-1 md:grid-cols-[1fr_.5fr] gap-2">
       <div className="w-full">
         <h2 className="text-[1.8rem] mb-[2rem]">Tessa</h2>
@@ -171,9 +171,9 @@ export default function Home() {
       
     </div>
     <div className="py-[2rem]"><Separator /></div>
-    <div className="flex justify-between items-center font-light text-[.875rem]">
+    <div className="flex flex-col md:flex-row justify-between font-light text-[.875rem]">
       <div>© Tessa by George Barbu. Powered by Webflow.</div>
-      <div className="flex gap-2">
+      <div className="flex flex-col md:flex-row gap-2 ">
           {['Privacy Policy', 'Terms of Service', 'Cookies Settings'].map((link)=>
           <Link key={link} className="underline decoration-1 " href={'#'}>{link}</Link>)}
       </div>
@@ -233,10 +233,10 @@ function CardSection(){
   md:grid md:grid-cols-3 md:grid-rows-2
   ">
     <GridContainer className="grid-cols-2 gap-[1.5rem] grid-rows-2 md:row-span-2">
-      <Card className="relative rounded-[20px] border-transparent col-span-2 row-span-2 overflow-hidden">
-        <CardHeader className="absolute bg-white z-10 w-full ">
-          <h2 className="text-[1.75rem] md:text-[2.25rem]">Improve the user experience of your product</h2>
-          <p className="font-light text-[1.125rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <Card className="relative rounded-[20px] border-transparent col-span-2 row-span-2 overflow-hidden h-[23rem] md:h-full">
+        <CardHeader className="absolute bg-white z-10 w-full flex flex-1 flex-col p-[2rem] justify-center">
+          <h2 className="text-[1.5rem] sm:text-[1.75rem] md:text-[2.25rem] leading-[1.3] mb-[1rem]">Improve the user experience of your product</h2>
+          <p className="font-light text-[1rem] md:text-[1.125rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </CardHeader>
         <div className="w-full h-full flex justify-end items-end">
         <AspectRatio ratio={5/4}>
@@ -247,10 +247,10 @@ function CardSection(){
         </div>
       </Card>
     </GridContainer>
-    <GridContainer className="grid-cols-2 bg-white rounded-[20px] overflow-hidden md:col-span-2">
-      <div className="p-[1.5rem] md:p-[2rem]">
-        <h2 className="text-[1.75rem] md:text-[2.25rem]">Design user-friendly products</h2>
-        <p className="font-light text-[1.125rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <GridContainer className="grid-cols-1 md:grid-cols-2 bg-white rounded-[20px] overflow-hidden md:col-span-2">
+      <div className="p-[1.5rem] md:p-[2rem] flex flex-1 flex-col justify-center ">
+        <h2 className="text-[1.5rem] sm:text-[1.75rem] md:text-[2.25rem] leading-[1.3] mb-[1rem]">Design user-friendly products</h2>
+        <p className="font-light text-[1rem] md:text-[1.125rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <AspectRatio ratio={3/2} >
         <Image 
@@ -259,16 +259,15 @@ function CardSection(){
           className=" object-cover rounded-r-[20px]" />
       </AspectRatio>
     </GridContainer>
-    <GridContainer className="grid-cols-2 gap-[1.2rem] md:col-span-2">
-      <div className="p-[1.5rem] md:p-[2rem] bg-white rounded-[20px]">
-        <h2 className="text-[1.75rem] md:text-[2.25rem]">Mobile & web development</h2>
-        <p className="font-light text-[1.125rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <GridContainer className="grid-cols-1 md:grid-cols-2 gap-[1.2rem] md:col-span-2">
+      <div className="p-[1.5rem] md:p-[2rem] bg-white rounded-[20px] flex flex-1 flex-col justify-center ">
+        <h2 className="text-[1.5rem] sm:text-[1.75rem] md:text-[2.25rem] leading-[1.3] mb-[1rem]">Mobile & web development</h2>
+        <p className="font-light text-[1rem] md:text-[1.125rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
-      <div className="p-[1.5rem] md:p-[2rem] bg-white rounded-[20px]">
-        <h2 className="text-[1.75rem] md:text-[2.25rem]">Branding & strategy</h2>
-        <p className="font-light text-[1.125rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div className="p-[1.5rem] md:p-[2rem] bg-white rounded-[20px] flex flex-1 flex-col justify-center ">
+        <h2 className="text-[1.5rem] sm:text-[1.75rem] md:text-[2.25rem] leading-[1.3] mb-[1rem]">Branding & strategy</h2>
+        <p className="font-light text-[1rem] md:text-[1.125rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
-     
     </GridContainer>
   </Wrapper>
   )
